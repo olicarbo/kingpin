@@ -185,7 +185,13 @@
     
     NSArray *oldClusters = [[[self.mapView annotationsInMapRect:bigRect] allObjects] kp_filter:^BOOL(id annotation) {
         
-        if([annotation isKindOfClass:[KPAnnotation class]]){
+        if([annotation isKindOfClass:[KPAnnotation class]])
+        {
+            if ([self.annotationTree.annotations count] == 0)
+            {
+                return true;
+            }
+            
             return ([self.annotationTree.annotations containsObject:[[(KPAnnotation*)annotation annotations] anyObject]]);
         }
         else {
