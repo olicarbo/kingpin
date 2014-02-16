@@ -35,7 +35,6 @@
     
     if(self){
         self.annotations = set;
-        self.title = [NSString stringWithFormat:@"%i things", [self.annotations count]];;
         [self calculateValues];
     }
     
