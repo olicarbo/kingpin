@@ -37,7 +37,7 @@ FOUNDATION_EXPORT uint64_t dispatch_benchmark(size_t count, void (^block)(void))
 @interface KPTreeController()
 
 @property (nonatomic) MKMapView *mapView;
-@property (nonatomic) KPAnnotationTree *annotationTree;
+@property (atomic) KPAnnotationTree *annotationTree;
 @property (nonatomic) MKMapRect lastRefreshedMapRect;
 @property (nonatomic) MKCoordinateRegion lastRefreshedMapRegion;
 @property (nonatomic) CGRect mapFrame;
